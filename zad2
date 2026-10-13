@@ -1,0 +1,10 @@
+import math
+
+coords = [tuple(map(float, input().split())) for _ in range(4)]
+perimeter = 0
+for i in range(4):
+    x1, y1 = coords[i]
+    x2, y2 = coords[(i + 1) % 4]
+    perimeter += math.hypot(x2 - x1, y2 - y1)
+
+print(perimeter)
